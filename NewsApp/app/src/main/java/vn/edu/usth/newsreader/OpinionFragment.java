@@ -1,6 +1,5 @@
 package vn.edu.usth.newsreader;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,14 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MenuFragment#newInstance} factory method to
+ * Use the {@link OpinionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MenuFragment extends Fragment {
+public class OpinionFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +24,7 @@ public class MenuFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public MenuFragment() {
+    public OpinionFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +34,11 @@ public class MenuFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MenuFragment.
+     * @return A new instance of fragment SecondFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MenuFragment newInstance(String param1, String param2) {
-        MenuFragment fragment = new MenuFragment();
+    public static OpinionFragment newInstance(String param1, String param2) {
+        OpinionFragment fragment = new OpinionFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,8 +59,27 @@ public class MenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false);
+        View view = inflater.inflate(R.layout.fragment_opinion, container, false);
 
+        Opinion1Fragment bao1Fragment = new Opinion1Fragment();
+        Opinion1Fragment bao2Fragment = new Opinion1Fragment();
+        Opinion1Fragment bao3Fragment = new Opinion1Fragment();
+
+        // Thêm fragment Vietnamese working FragmentContainerView
+        getChildFragmentManager().beginTransaction()
+                .replace(R.id.id_bao1, bao1Fragment)
+                .commit();
+
+        // Thêm fragment emal student vào FragmentContainerView
+        getChildFragmentManager().beginTransaction()
+                .replace(R.id.id_bao2, bao2Fragment)
+                .commit();
+
+        // Thêm fragment bao yagi vào FragmentContainerView
+        getChildFragmentManager().beginTransaction()
+                .replace(R.id.id_bao3, bao3Fragment)
+                .commit();
+        return view;
+        //return inflater.inflate(R.layout.fragment_second, container, false);
     }
-
 }

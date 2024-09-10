@@ -2,21 +2,18 @@ package vn.edu.usth.newsreader;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MenuFragment#newInstance} factory method to
+ * Use the {@link Nghiafrag2#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MenuFragment extends Fragment {
+public class Nghiafrag2 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +24,7 @@ public class MenuFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public MenuFragment() {
+    public Nghiafrag2() {
         // Required empty public constructor
     }
 
@@ -37,11 +34,11 @@ public class MenuFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MenuFragment.
+     * @return A new instance of fragment Nghiafrag2.
      */
     // TODO: Rename and change types and number of parameters
-    public static MenuFragment newInstance(String param1, String param2) {
-        MenuFragment fragment = new MenuFragment();
+    public static Nghiafrag2 newInstance(String param1, String param2) {
+        Nghiafrag2 fragment = new Nghiafrag2();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,8 +59,15 @@ public class MenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false);
-
+        //return inflater.inflate(R.layout.fragment_nghiafrag2, container, false);
+        View view = inflater.inflate(R.layout.fragment_nghiafrag2, container, false);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Nghia2Activity.class);
+                startActivity(intent);
+            }
+        });
+        return view;
     }
-
 }
