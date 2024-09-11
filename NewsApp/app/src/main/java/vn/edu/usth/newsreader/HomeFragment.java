@@ -93,7 +93,7 @@ public class HomeFragment extends Fragment {
         private final String[] titles = new String[]{"First", "Second"};
 
         public HomePagerAdapter(@NonNull FragmentManager fm) {
-            super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+            super(fm);
         }
 
         @Override
@@ -106,11 +106,11 @@ public class HomeFragment extends Fragment {
         public Fragment getItem(int page) {
             switch (page) {
                 case 0:
-                    return new FirstFragment();  // Replace with appropriate fragment for each tab
+                    return new HotNewsFragment();  // Replace with appropriate fragment for each tab
                 case 1:
                     return new OpinionFragment();
                 default:
-                    return new FirstFragment();
+                    return new HotNewsFragment();
 
             }
         }

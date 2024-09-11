@@ -62,8 +62,8 @@ public class OpinionFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_opinion, container, false);
 
         Opinion1Fragment bao1Fragment = new Opinion1Fragment();
-        Opinion1Fragment bao2Fragment = new Opinion1Fragment();
-        Opinion1Fragment bao3Fragment = new Opinion1Fragment();
+        Opinion2Fragment bao2Fragment = new Opinion2Fragment();
+        Opinion3Fragment bao3Fragment = new Opinion3Fragment();
 
         // Thêm fragment Vietnamese working FragmentContainerView
         getChildFragmentManager().beginTransaction()

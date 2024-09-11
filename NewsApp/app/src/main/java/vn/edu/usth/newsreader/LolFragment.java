@@ -1,5 +1,6 @@
 package vn.edu.usth.newsreader;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -59,6 +60,19 @@ public class LolFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lol, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_lol, container, false);
+
+        // Lắng nghe sự kiện khi người dùng nhấp vào fragment
+        view.setOnClickListener(v -> {
+            // Tạo Intent để chuyển sang BallDetailActivity
+            Intent intent = new Intent(getActivity(), LolDetailActivity.class);
+
+            startActivity(intent);
+        });
+
+        return view;
+
+        //return inflater.inflate(R.layout.fragment_lol, container, false);
     }
 }

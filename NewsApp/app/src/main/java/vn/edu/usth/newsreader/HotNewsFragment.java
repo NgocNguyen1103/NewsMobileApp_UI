@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FirstFragment#newInstance} factory method to
+ * Use the {@link HotNewsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FirstFragment extends Fragment {
+public class HotNewsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class FirstFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FirstFragment() {
+    public HotNewsFragment() {
         // Required empty public constructor
     }
 
@@ -37,8 +37,8 @@ public class FirstFragment extends Fragment {
      * @return A new instance of fragment FirstFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FirstFragment newInstance(String param1, String param2) {
-        FirstFragment fragment = new FirstFragment();
+    public static HotNewsFragment newInstance(String param1, String param2) {
+        HotNewsFragment fragment = new HotNewsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,27 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false);
+        View view = inflater.inflate(R.layout.fragment_hotnews, container, false);
+        FootBallFragment footballNewsFragment = new FootBallFragment();
+        ChessFragment chessNewsFragment = new ChessFragment();
+        LolFragment lolNewsFragment = new LolFragment();
+
+        // Thêm fragment bóng đá vào FragmentContainerView
+        getChildFragmentManager().beginTransaction()
+                .replace(R.id.fragment_football, footballNewsFragment)
+                .commit();
+
+        // Thêm fragment cờ vua vào FragmentContainerView
+        getChildFragmentManager().beginTransaction()
+                .replace(R.id.fragment_chess, chessNewsFragment)
+                .commit();
+
+        // Thêm fragment liên minh vào FragmentContainerView
+        getChildFragmentManager().beginTransaction()
+                .replace(R.id.fragment_lol, lolNewsFragment)
+                .commit();
+        //return inflater.inflate(R.layout.fragment_hotnews, container, false);
+        return view;
+
     }
 }
