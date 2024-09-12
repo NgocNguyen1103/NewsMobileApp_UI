@@ -25,7 +25,7 @@
             android:layout_gravity="center_vertical"
             android:paddingLeft="30dp"
             android:text="Nguyen Van A"
-            android:textSize="30dp">
+            android:textSize="29dp">
 
         </TextView>
 
