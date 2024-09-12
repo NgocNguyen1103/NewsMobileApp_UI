@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="80dp"
-    tools:context=".MainActivity">
+    tools:context=".qngoc_place.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:orientation="horizontal"
@@ -15,27 +15,27 @@
 
         <fragment
             android:id="@+id/info"
-            android:name= "vn.edu.usth.newsreader.Nghiafrag1"
+            android:name= "vn.edu.usth.newsreader.nghia_place.Nghiafrag1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
         <fragment
             android:layout_marginTop="60dp"
             android:id="@+id/setting"
-            android:name="vn.edu.usth.newsreader.Nghiafrag2"
+            android:name="vn.edu.usth.newsreader.nghia_place.Nghiafrag2"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <fragment
             android:layout_marginTop="110dp"
             android:id="@+id/late"
-            android:name="vn.edu.usth.newsreader.Nghiafrag3"
+            android:name="vn.edu.usth.newsreader.nghia_place.Nghiafrag3"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <fragment
             android:layout_marginTop="160dp"
             android:id="@+id/ext"
-            android:name="vn.edu.usth.newsreader.Nghiafrag4"
+            android:name="vn.edu.usth.newsreader.nghia_place.Nghiafrag4"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

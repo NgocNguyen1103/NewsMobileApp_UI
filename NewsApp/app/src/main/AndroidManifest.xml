@@ -13,43 +13,43 @@
         android:theme="@style/Theme.NewsReader"
         tools:targetApi="31" >
         <activity
-            android:name=".LolDetailActivity"
+            android:name=".duy_place.LolDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".BallDetailActivity"
+            android:name=".duy_place.BallDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ChessDetailActivity"
+            android:name=".duy_place.ChessDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Nghia4Activity"
+            android:name=".nghia_place.Nghia4Activity"
             android:exported="false" />
         <activity
-            android:name=".Nghia3Activity"
+            android:name=".nghia_place.Nghia3Activity"
             android:exported="false" />
         <activity
-            android:name=".Nghia2Activity"
+            android:name=".nghia_place.Nghia2Activity"
             android:exported="false" />
         <activity
-            android:name=".Nghia1Activity"
+            android:name=".nghia_place.Nghia1Activity"
             android:exported="false" />
         <activity
-            android:name=".Opinion3_detailActivity"
+            android:name=".duc_place.Opinion3_detailActivity"
             android:exported="false" />
         <activity
-            android:name=".Opinion2_detailActivity"
+            android:name=".duc_place.Opinion2_detailActivity"
             android:exported="false" />
         <activity
-            android:name=".Opinion1_detailActivity"
+            android:name=".duc_place.Opinion1_detailActivity"
             android:exported="false" />
         <activity
-            android:name=".vid2_detailActivity"
+            android:name=".qngoc_place.vid2_detailActivity"
             android:exported="false" />
         <activity
-            android:name=".vid1_detailActivity"
+            android:name=".qngoc_place.vid1_detailActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".qngoc_place.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
