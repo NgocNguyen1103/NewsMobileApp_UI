@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
     tools:context=".Video1Fragment"
     android:id="@+id/video1_fragment">
 
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginLeft="10.5dp"
-        android:layout_marginTop="50dp">
+        >
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="240dp"

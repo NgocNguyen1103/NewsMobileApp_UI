@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="56dp"
         >
         <androidx.fragment.app.FragmentContainerView
+
             android:id="@+id/video1_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
